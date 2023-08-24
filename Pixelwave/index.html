@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Software Company</title>
+  <style>
+    /* Add your CSS styles here */
+    /* For example: */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body{
+      background-color: aquamarine;
+    }
+    
+    /* Customize the navbar styles */
+    .navbar {
+      background-color: #333;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+    
+    .navbar a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px;
+      text-decoration: none;
+      font-size: 18px;
+    }
+    
+    .navbar a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+    
+    .navbar .logo {
+      margin-right: 250px;
+    }
+    
+    /* Customize the logo image styles */
+    .navbar .logo img {
+      height: 40px;
+      width: auto;
+      vertical-align: middle;
+    }
+    
+    /* Customize the social media icons */
+    .social-icons {
+      float: right;
+      margin-left: 1000px;
+    }
+    
+    .social-icons img {
+      height: 20px;
+      width: auto;
+      margin-left: 10px;
+      vertical-align: middle;
+    }
+    
+    /* Customize the content area */
+    .content {
+      background-color: #f9f9f9;
+      padding: 20px;
+      height: 100vh; /* Adjust the height as needed */
+      flex-grow: 1; /* Allow the content area to expand and fill the remaining space */
+      background-color: aqua;
+    }
+    
+    /* customize the intro */
+    #intro {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      height: 200px;
+      width: 100%;
+    }
+    
+    /* Customize the slogan */
+    .slogan {
+      font-size: 24px;
+      margin-top: 200px;
+      font-weight: bold;
+      width: 400px;
+      font-size: 3rem;
+    }
+    
+    /* Customize the note */
+    .notee {
+      font-size: 0.85rem;
+    }
+    
+    /* Customize the parallel picture */
+    .parallel-picture {
+      width: 200px;
+      height: 200px;
+      margin-right: 100px;
+    }
+    
+    .parallel-picture img {
+      height: 700px;
+      width: 700px;
+      object-fit: cover;
+      display: block;
+    }
+    
+    /* internship area */
+    .internship-heading {
+      text-align: center;
+      font-size: 24px;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+    
+    .internship-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      height: 800px;
+    }
+    
+    .internship-box {
+      border: 2px solid black;
+      padding: 20px;
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 400px;
+      height: 250px;
+      margin-right: 20px;
+    }
+    
+    .internship-box img {
+      height: 300px;
+      width: 300px;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+    
+    .box-button {
+      margin-top: 20px;
+      background-color: orangered;
+      border-bottom-right-radius: 4px;
+    }
+    
+    /* Customize the footer */
+    footer {
+      background-color: aquamarine;
+      height: 200px;
+      color: #f2f2f2;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #212529;
+    }
+    
+    .footer-box {
+      display: flex;
+      align-items: center;
+    }
+    
+    .footer-box img {
+      height: 20px;
+      width: 20px;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <a class="logo" href="#home"><img src="main-logo.png" alt="Logo"></a>
+    <!-- <a href="#services">Home</a> -->
+    <a id="Home" href="index.html">Home</a>
+    <a class="intership" id="intern" href="#internship" onclick="scrollToSection('internship-container')">Internship</a>
+    <!-- <a id="verifaction" href="#verification" onclick="alert('Verification Page')">Verification</a> -->
+    <a id="verifaction" href="verification.html">Verification</a>
+    <a id="about" href="#contact" onclick="scrollToSection('footer-box')">About</a>
+    <div class="social-icons">
+      <a href="#facebook"><img src="800px-LinkedIn_logo_initials-removebg-preview.png" alt="Facebook"></a>
+      <a href="#linkedin"><img src="blue-social-media-logo_197792-1759-removebg-preview.png" alt="LinkedIn"></a>
+      <a href="#instagram"><img src="purple-gradiend-social-media-logo_197792-1883-removebg-preview.png" alt="Instagram"></a>
+    </div>
+  </div>
+
+  <div class="content">
+    <div id="intro">
+      <div class="slogan">
+        Grow your skills<br>
+        with "Pixelwave"
+        <p class="notee"><br> Experience the perfect blend of mentorship, real-world challenges, and professional development through our software internship program. <br> As a part of our team, you'll have the opportunity to make a meaningful impact, solve complex problems, <br> and unleash your creativity. Take the leap towards a successful career and build a solid foundation for your future in software engineering."</p>
+      </div>
+      <br>
+      <div class="parallel-picture">
+        <img src="student-study-removebg.png" alt="Picture">
+      </div>
+    </div>
+  </div>
+
+  <div class="internship">
+    <!-- Add the "Our Internship" heading -->
+    <h2 class="internship-heading">Our Internship</h2>
+
+    <!-- Add the four square boxes with borders and "Check Now" buttons -->
+    <div class="internship-container" id="internship-container">
+      <div class="internship-box">
+        <h3>Web Development</h3>
+        <img src="web.jpeg" alt="Web Development Image">
+        <button class="box-button">Check Now</button>
+      </div>
+
+      <div class="internship-box">
+        <h3>App Development</h3>
+        <img src="app.png" alt="App Development Image">
+        <button class="box-button">Check Now</button>
+      </div>
+
+      <div class="internship-box">
+        <h3>C/C++</h3>
+        <img src="c++.jpeg" alt="C/C++ Image">
+        <button class="box-button">Check Now</button>
+      </div>
+
+      <div class="internship-box">
+        <h3>Cyber Security</h3>
+        <img src="cyber.jpeg" alt="Cyber Security Image">
+        <button class="box-button">Check Now</button>
+      </div>
+
+      <div class="internship-box">
+        <h3>Java Development</h3>
+        <img src="java.jpeg" alt="Java Development Image">
+        <button class="box-button">Check Now</button>
+      </div>
+
+      <div class="internship-box">
+        <h3>Python Development</h3>
+        <img src="python.jpeg" alt="Python Development Image">
+        <button class="box-button">Check Now</button>
+      </div>
+
+      <div class="internship-box">
+        <h3>Data Science</h3>
+        <img src="data.jpeg" alt="Data Science Image">
+        <button class="box-button">Check Now</button>
+      </div>
+
+      <div class="internship-box">
+        <h3>Learn Linux</h3>
+        <img src="linux.jpeg" alt="Learn Linux Image">
+        <button class="box-button">Check Now</button>
+      </div>
+    </div>
+  </div>
+  
+  <footer>
+    <div class="footer-box" id="footer-box">
+      <img src="main-logo.png" alt="Pixelwave Logo">
+      <br>Grow your skills <br>with "Pixelwave"
+    </div>
+    <div class="footer-box">
+      <img src="placeholder_318-903608-removebg-preview.png" alt="Address Logo">
+      LF IT SEZ Park Main Entrance, Ramapuram, 
+      <br>Chennai, Tamil Nadu 600125
+    </div>
+    <div class="footer-box">
+      <img src="800px-LinkedIn_logo_initials-removebg-preview.png" alt="Facebook Logo">
+      <img src="purple-gradiend-social-media-logo_197792-1883-removebg-preview.png" alt="Instagram Logo">
+    </div>
+  </footer>
+
+  <script>
+    function scrollToSection(sectionId) {
+      document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
