@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Verification Page</title>
+  <style>
+     body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body{
+      background-color: aquamarine;
+    }
+     .navbar {
+      background-color: #333;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+    
+    .navbar a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px;
+      text-decoration: none;
+      font-size: 18px;
+    }
+    
+    .navbar a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+    
+    .navbar .logo {
+      margin-right: 250px;
+    }
+    
+    /* Customize the logo image styles */
+    .navbar .logo img {
+      height: 40px;
+      width: auto;
+      vertical-align: middle;
+    }
+    
+    /* Customize the social media icons */
+    .social-icons {
+      float: right;
+      margin-left: 1000px;
+    }
+    
+    .social-icons img {
+      height: 20px;
+      width: auto;
+      margin-left: 10px;
+      vertical-align: middle;
+    }
+    #box{
+      height: 630px;
+    }
+    input[type="text"] {
+      width: 300px;
+      height: 40px;
+      padding: 8px;
+      border: 2px solid #ddd;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    input[type="text"]:focus {
+      outline: none;
+      border-color: #9ecaed;
+      box-shadow: 0 0 5px #9ecaed;
+    }
+
+    button[type="submit"] {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #45a049;
+    }
+/* Add a container to center the verification form */
+#verificationContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Adjust as needed */
+}
+
+/* Center the verification box and align the button on the same line */
+#box {
+  text-align: center;
+  display: inline-block;
+}
+
+input[type="text"] {
+  /* Your existing styles */
+}
+
+button[type="submit"] {
+  /* Your existing styles */
+}
+
+    footer {
+      background-color: aquamarine;
+      height: 200px;
+      color: #f2f2f2;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #212529;
+    }
+    
+    .footer-box {
+      display: flex;
+      align-items: center;
+    }
+    
+    .footer-box img {
+      height: 20px;
+      width: 20px;
+      margin-right: 10px;
+    }
+    /* Your existing styles here */
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <div class="navbar">
+      <a class="logo" href="#home"><img src="main-logo.png" alt="Logo"></a>
+      <!-- <a href="#services">Home</a> -->
+      <a id="Home" href="index.html">Home</a>
+      <a class="intership" id="intern" href="#internship" onclick="scrollToSection('internship-container')">Internship</a>
+      <!-- <a id="verifaction" href="#verification" onclick="alert('Verification Page')">Verification</a> -->
+      <a id="verifaction" href="verification.html">Verification</a>
+      <a id="about" href="#contact" onclick="scrollToSection('about-section')">About</a>
+      <div class="social-icons">
+        <a href="#facebook"><img src="800px-LinkedIn_logo_initials-removebg-preview.png" alt="Facebook"></a>
+        <a href="#linkedin"><img src="blue-social-media-logo_197792-1759-removebg-preview.png" alt="LinkedIn"></a>
+        <a href="#instagram"><img src="purple-gradiend-social-media-logo_197792-1883-removebg-preview.png" alt="Instagram"></a>
+      </div>
+    </div>
+    <!-- Your navbar content -->
+  </div>
+
+  <h1 style="text-align: center;">Verification Page</h1>
+  
+  <!-- Add a container for centering the verification form -->
+  <div id="verificationContainer">
+    <form id="verificationForm">
+      <div id="box">
+        <input type="text" id="verificationCode" name="verificationCode" placeholder="Verification Code" required>
+        <button type="submit">Verify</button>
+      </div>
+    </form>
+  </div>
+
+  <div id="details" style="text-align: center; display: none;">
+    <!-- Details section remains the same -->
+  </div>
+
+  <footer>
+    <!-- Your footer content -->
+    <div class="footer-box">
+      <img src="main-logo.png" alt="Pixelwave Logo">
+      <br>Grow your skills <br>with "Pixelwave"
+    </div>
+    <div class="footer-box">
+      <img src="placeholder_318-903608-removebg-preview.png" alt="Address Logo">
+      LF IT SEZ Park Main Entrance, Ramapuram, 
+      <br>Chennai, Tamil Nadu 600125
+    </div>
+    <div class="footer-box">
+      <img src="800px-LinkedIn_logo_initials-removebg-preview.png" alt="Facebook Logo">
+      <img src="purple-gradiend-social-media-logo_197792-1883-removebg-preview.png" alt="Instagram Logo">
+    </div>
+  </footer>
+  <script>
+    document.getElementById('verificationForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent form submission
+  
+      var verificationCode = document.getElementById('verificationCode').value;
+  
+      // Add your 30 verification code and URL mappings
+      var verificationMappings = {
+        '123456': 'cer1.html',
+        '654321': 'cer2.html',
+        // Add more verification codes and URLs here...
+        '987654': 'cer30.html'
+      };
+  
+      if (verificationMappings.hasOwnProperty(verificationCode)) {
+        var targetURL = verificationMappings[verificationCode];
+        // Open the corresponding URL in a new tab
+        window.open(targetURL, '_blank');
+      } else {
+        // Display the details section and show the verification result
+        var detailsDiv = document.getElementById('details');
+        var resultDiv = document.getElementById('result');
+        resultDiv.textContent = 'Verification failed. Please try again.';
+        detailsDiv.style.display = 'block';
+      }
+    });
+  </script>
+  
+</body>
+</html>
